@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8655374132757380226}
   - component: {fileID: 8655374132757380225}
   - component: {fileID: 8655374132757380224}
-  - component: {fileID: 8655374132757380231}
   - component: {fileID: 8655374132757380230}
+  - component: {fileID: 8655374132757380231}
   - component: {fileID: 877930693986600905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,20 +114,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8655374132757380231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8655374132757380229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff009827ba0e84e47bf36ee9a50cb77a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 8655374132757380230}
-  Move_Speed: 100
 --- !u!50 &8655374132757380230
 Rigidbody2D:
   serializedVersion: 4
@@ -149,6 +135,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8655374132757380231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8655374132757380229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff009827ba0e84e47bf36ee9a50cb77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8655374132757380230}
+  Move_Speed: 30
 --- !u!114 &877930693986600905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 1
   Distance: 1.1
-  enemieLayer:
+  playerLayer:
     serializedVersion: 2
     m_Bits: 0

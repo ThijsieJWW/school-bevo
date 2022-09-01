@@ -10,6 +10,7 @@ public class Movement_Player : MonoBehaviour
     public float JumpForce = 20f;
     public Transform GroundCheck;
     public LayerMask groundLayers;
+    public float killForce = 25f;
 
     float mx;
 
@@ -34,6 +35,8 @@ public class Movement_Player : MonoBehaviour
         {
             Jump();
         }
+
+        DamageEnemy();
     }
 
     private void FixedUpdate()
@@ -60,5 +63,26 @@ public class Movement_Player : MonoBehaviour
         }
 
         return false;
+    }
+
+    public LayerMask enemyLayers;
+    public float DistanceEnemy = 1.25f;
+
+    void DamageEnemy()
+    {
+        RaycastHit2D EnemyCheck;
+        if (EnemyCheck = Physics2D.Raycast(transform.position, -transform.up, DistanceEnemy, enemyLayers))
+        {
+            DamagePlayer health = EnemyCheck.transform.GetComponent<DamagePlayer>();
+            Vector2 movement = new Vector2(rb.velocity.x, JumpForce);
+            rb.velocity = movement;
+            if (health != null)
+            {
+                health.die();
+            }
+            Debug.Log("so far good");
+            Debug.Log("i hop this works");
+        }
+
     }
 }

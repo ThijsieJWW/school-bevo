@@ -33,4 +33,9 @@ public class DamagePlayer : MonoBehaviour
             }
         }
     }
+
+    public void die()
+    {
+        Destroy(gameObject);
+    }
 }
