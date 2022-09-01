@@ -4,67 +4,61 @@ using UnityEngine;
 
 public class Movement_Player : MonoBehaviour
 {
-    public Transform start;
+    public float Move_Speed;
     public Rigidbody2D rb;
 
-    public float MoveSpeed = 10;
-    public float JumpForce = 5;
+    public float JumpForce = 20f;
+    public Transform GroundCheck;
+    public LayerMask groundLayers;
 
-    public bool isJumping;
+    float mx;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        transform.position = start.position;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)//check if nothing is pressed
         {
-            Left_moving();
+            mx = 0f;//set the forces to nothing
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))//check for the D button
         {
-            Right_moving();
+            mx = 1f;//set the forces to right
         }
 
-        if (Input.GetKey(KeyCode.W) && isJumping == false)
+        if (Input.GetKey(KeyCode.A))//check for the A button
+        {
+            mx = - 1f;//set the forces to left
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) && isGrouned())
         {
             Jump();
         }
     }
 
-    void Left_moving()
+    private void FixedUpdate()
     {
-        rb.AddForce(new Vector2(-MoveSpeed, 0));
-    }
+        Vector2 movement = new Vector2(mx * Move_Speed, rb.velocity.y);//rekent de movemt snelheid en de directie
 
-    void Right_moving()
-    {
-        rb.AddForce(new Vector2(MoveSpeed, 0));
+        rb.velocity = movement;//voert de forces uit
     }
 
     void Jump()
     {
-        rb.AddForce(new Vector2(0, JumpForce));
+        Vector2 movement = new Vector2(rb.velocity.x, JumpForce);
+
+        rb.velocity = movement;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public bool isGrouned()
     {
-        if (other.gameObject.CompareTag("Floor"))
-        {
-            isJumping = false;
-        }
-    }
+        Collider2D groundCheck = Physics2D.OverlapCircle(GroundCheck.position, 0.5f, groundLayers);
 
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Floor"))
+        if (groundCheck != null)
         {
-            isJumping = true;
+            return true;
         }
+
+        return false;
     }
 }
