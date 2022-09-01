@@ -333,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1704150077}
   TimeBetween: 1
-  offset: {x: 0, y: 3.5, z: -10}
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &463387656
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 463387657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +519,8 @@ GameObject:
   - component: {fileID: 1704150076}
   - component: {fileID: 1704150075}
   - component: {fileID: 1704150078}
-  m_Layer: 0
+  - component: {fileID: 1704150079}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,6 +610,19 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1704150079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704150074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239e64d7fa4337e40897b968ba45d944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Maxhealth: 3
 --- !u!1 &1755085760
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755085760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.5, y: 0, z: 0}
+  m_LocalPosition: {x: 64.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -824,8 +838,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787491948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 1}
+  m_LocalPosition: {x: 20, y: -14.3318, z: 0}
+  m_LocalScale: {x: 90, y: 19.6637, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -842,7 +856,7 @@ GameObject:
   - component: {fileID: 1851416884}
   - component: {fileID: 1851416885}
   - component: {fileID: 1851416886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2043932996}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,6 +1016,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 877930693986600905, guid: d524d09fdaa594948a1f590ed0991abd, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 8655374132757380226, guid: d524d09fdaa594948a1f590ed0991abd, type: 3}
       propertyPath: m_RootOrder
       value: 4
