@@ -6,6 +6,7 @@ public class Movement_Player : MonoBehaviour
 {
     public float Move_Speed;
     public Rigidbody2D rb;
+    public ParticleSystem JumpSmoke;
 
     public float JumpForce = 20f;
     public Transform GroundCheck;
@@ -34,6 +35,7 @@ public class Movement_Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && isGrouned())
         {
             Jump();
+            JumpSmoke.Play();
         }
 
         DamageEnemy();
