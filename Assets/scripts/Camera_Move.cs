@@ -10,8 +10,6 @@ public class Camera_Move : MonoBehaviour
     public Vector3 offset;
     private void LateUpdate()
     {
-        Vector3 desirePoint = target.position + offset;
-        Vector3 smoothed_position = Vector3.Lerp(transform.position, desirePoint, TimeBetween);
-        transform.position = smoothed_position;
+        transform.position = new Vector3(target.position.x, 0, 0) + offset;
     }
 }
