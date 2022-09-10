@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PortalDetection : MonoBehaviour
+public class PortalDetection2 : MonoBehaviour
 {
     public GameManger gm;
 
@@ -11,8 +10,9 @@ public class PortalDetection : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("you won lvl 1");
-            gm.Lvl1_finish();
+            Debug.Log("you won lvl 2");
+            gm.Lvl2_finish();
         }
     }
+
 }
