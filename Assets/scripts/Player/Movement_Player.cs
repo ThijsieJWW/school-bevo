@@ -13,6 +13,10 @@ public class Movement_Player : MonoBehaviour
     public LayerMask groundLayers;
     public float killForce = 25f;
 
+    //slide vairibles
+    public bool sliding = false;
+    public float slide_speed;
+
     float mx;
 
     private void Update()
@@ -38,6 +42,16 @@ public class Movement_Player : MonoBehaviour
             JumpSmoke.Play();
         }
 
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            sliding = true;
+        }
+        else
+        {
+            sliding = false;
+        }
+
+        Slide();
         DamageEnemy();
     }
 
@@ -83,8 +97,16 @@ public class Movement_Player : MonoBehaviour
                 health.die();
             }
             Debug.Log("so far good");
-            Debug.Log("i hop this works");
+            Debug.Log("i hope this works");
         }
 
+    }
+
+    void Slide()
+    {
+        if (sliding == true)
+        {
+            transform.Rotate(Vector3.down * -45);
+        }
     }
 }
