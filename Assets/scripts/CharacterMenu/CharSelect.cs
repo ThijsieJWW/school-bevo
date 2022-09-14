@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class CharSelect : MonoBehaviour
 {
     public GameObject[] Characters;
@@ -21,26 +22,26 @@ public class CharSelect : MonoBehaviour
 
     void UpdateSprites()
     {
-        Transform t;
         for (int i = 0; i < Characters.Length; i++)
         {
-            t = Characters[i].GetComponent<Transform>();
-            t.position.Set((currChar * i) * 5,0,0);
+            Characters[i].transform.position = new Vector3((i - currChar) * 5, 0, 0);
         }
     }
 
     void Next()
     {
-        if (currChar + 1 < Characters.Length) {
+        if (currChar<=Characters.Length-2) {
             currChar++;
         }
+        UpdateSprites();
     }
 
     void Prev()
     {
-        if (currChar-1 > 0)
+        if (currChar>=1)
         {
             currChar--;
         }
+        UpdateSprites();
     }
 }
