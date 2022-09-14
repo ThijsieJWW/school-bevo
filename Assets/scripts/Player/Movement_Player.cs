@@ -16,6 +16,7 @@ public class Movement_Player : MonoBehaviour
     //slide vairibles
     public bool sliding = false;
     public float slide_speed;
+    public BoxCollider2D BC2D;
 
     float mx;
 
@@ -42,7 +43,7 @@ public class Movement_Player : MonoBehaviour
             JumpSmoke.Play();
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             sliding = true;
         }
@@ -106,7 +107,25 @@ public class Movement_Player : MonoBehaviour
     {
         if (sliding == true)
         {
-            transform.Rotate(Vector3.down * -45);
+            if (mx < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, -90);
+                //BC2D.size = new Vector2(0.5f, 1f);
+                //BC2D.offset = new Vector2(-0.1f, -0.2f);
+            }
+
+            if (mx > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 90);
+                //BC2D.offset = new Vector2(-0.1f, -0.1f);
+            }
+            
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            //BC2D.size = new Vector2(0.5f, 1.2f);
+            //BC2D.offset = new Vector2(-0.1f, -0.2f);
         }
     }
 }
