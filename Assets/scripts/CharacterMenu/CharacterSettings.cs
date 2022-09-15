@@ -5,6 +5,6 @@ namespace Assets.scripts.CharacterMenu
 {
     public static class CharacterSettings
     {
-        static int SelectedCharacter=0;
+        public static int SelectedCharacter=0;
     }
 }
