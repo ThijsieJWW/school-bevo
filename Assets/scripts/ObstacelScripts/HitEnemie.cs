@@ -12,7 +12,7 @@ public class HitEnemie : MonoBehaviour
         if (other.collider.CompareTag(tag_NL_docent))
         {
             Debug.Log("hit NLdocent");
-            Instantiate(PS_break, transform.position, transform.rotation);
+            Instantiate(PS_break, transform.position, transform.rotation );
             Destroy(gameObject);
         }
     }
