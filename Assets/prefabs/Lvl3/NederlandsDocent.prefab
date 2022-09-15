@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4258874648643379494}
   - component: {fileID: 4258874648643379493}
   - component: {fileID: 3315129346804379282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NederlandsDocent
-  m_TagString: Untagged
+  m_TagString: NLdocent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74ceb43fe171bf4fbcadcdb54c767df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   rb: {fileID: 0}
   speed: 0
 --- !u!1 &4258874649337834527
@@ -106,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4258874649337834520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4258874649517179862}
   - component: {fileID: 4258874649517179863}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
