@@ -34,6 +34,12 @@ public class GameManger : MonoBehaviour
         Won_table.SetActive(true);
     }
 
+    public void Lvl3_finish()
+    {
+        Time.timeScale = 0f;
+        Won_table.SetActive(true);
+    }
+
     public void NextLVL_button(string level)
     {
         Debug.Log("Next level");
