@@ -6,7 +6,7 @@ public class Refil_Basketballs : MonoBehaviour
 {
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponent<Basket_ball_combatSystem>().BasketBall_refill();
         }

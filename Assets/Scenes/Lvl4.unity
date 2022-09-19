@@ -1283,6 +1283,7 @@ GameObject:
   - component: {fileID: 1250832247}
   - component: {fileID: 1250832246}
   - component: {fileID: 1250832248}
+  - component: {fileID: 1250832249}
   m_Layer: 11
   m_Name: Basketball_car
   m_TagString: basket
@@ -1384,6 +1385,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1250832249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250832245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8085c0fd689d84b8cb5e2c1442c828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1426609609
 GameObject:
   m_ObjectHideFlags: 0
