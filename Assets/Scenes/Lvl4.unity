@@ -897,6 +897,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 481736533
       objectReference: {fileID: 0}
+    - target: {fileID: 7726043875163915122, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+      propertyPath: max_basketball_txt
+      value: 
+      objectReference: {fileID: 42696660}
+    - target: {fileID: 7726043875163915122, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+      propertyPath: current_basketball_txt
+      value: 
+      objectReference: {fileID: 27731104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
 --- !u!4 &975843290 stripped
