@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Basket_ball_combatSystem : MonoBehaviour
 {
-    int current_basketBall = 0;
-    int max_basketBall = 5;
+    public int current_basketBall = 0;
+    public int max_basketBall = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -19,21 +19,18 @@ public class Basket_ball_combatSystem : MonoBehaviour
     {
         if (current_basketBall >= 1 && Input.GetKeyDown(KeyCode.Q))
         {
-            shootBall();
-            Debug.Log("1 basket ball shooted");
-        }
+            shootBall();        }
     }
 
     void shootBall()
     {
-
+        Debug.Log("Basket ball shooted");
+        current_basketBall--;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public void BasketBall_refill()
     {
-        if (other.collider.CompareTag("basket") && Input.GetKeyDown(KeyCode.E) && current_basketBall <= 4)
-        {
-            current_basketBall += 5;
-        }
+        current_basketBall = 5;
+        Debug.Log("Basket balls reffiled");
     }
 }
