@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Refil_Basketballs : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        {
+            other.GetComponent<Basket_ball_combatSystem>().BasketBall_refill();
+        }
     }
 }
