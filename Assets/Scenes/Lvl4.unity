@@ -890,12 +890,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7391811124180141532, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391811124180141532, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7391811124180141532, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
       propertyPath: m_SortingLayerID
       value: 481736533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391811124180141532, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7726043875163915122, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
       propertyPath: max_basketball_txt
@@ -912,6 +920,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7391811123990814932, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
   m_PrefabInstance: {fileID: 975843289}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &975843291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7391811124180141530, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+  m_PrefabInstance: {fileID: 975843289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &975843292
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975843291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef9626c0a2774564bb450261925e0bf6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1018434381
 GameObject:
   m_ObjectHideFlags: 0
