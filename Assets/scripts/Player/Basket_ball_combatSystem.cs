@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Basket_ball_combatSystem : MonoBehaviour
-{
+{   
+    //basket ball counters
     public int current_basketBall = 0;
     public int max_basketBall = 5;
 
+    //basket bal texts
     public Text max_basketball_txt;
     public Text current_basketball_txt;
+
+    //the basketbal/point to shoot refrence
+    public GameObject Basketball;
+    public Transform pointToShoot;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +38,7 @@ public class Basket_ball_combatSystem : MonoBehaviour
     void shootBall()
     {
         Debug.Log("Basket ball shooted");
+        Instantiate(Basketball, pointToShoot.position, transform.rotation);
         current_basketBall--;
     }
 
