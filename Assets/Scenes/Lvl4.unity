@@ -889,10 +889,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7391811123990814935, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+      propertyPath: animtor
+      value: 
+      objectReference: {fileID: 975843292}
     - target: {fileID: 7391811124180141532, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 91e9e5cf1137fd94981f9e017d2b3d47, type: 3}
     - target: {fileID: 7391811124180141532, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
       propertyPath: m_SortingLayer
       value: 3
