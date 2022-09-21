@@ -18,6 +18,9 @@ public class Movement_Player : MonoBehaviour
     public float slide_speed;
     public BoxCollider2D BC2D;
 
+    //varibles for animation
+    public Animator animtor;
+
     float mx;
 
     private void Update()
@@ -25,16 +28,19 @@ public class Movement_Player : MonoBehaviour
         if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)//check if nothing is pressed
         {
             mx = 0f;//set the forces to nothing
+            animtor.SetFloat("speed", 0);
         }
 
         if (Input.GetKey(KeyCode.D))//check for the D button
         {
             mx = 1f;//set the forces to right
+            animtor.SetFloat("speed", 1);
         }
 
         if (Input.GetKey(KeyCode.A))//check for the A button
         {
             mx = - 1f;//set the forces to left
+            animtor.SetFloat("speed", 1);
         }
 
         if (Input.GetKeyDown(KeyCode.W) && isGrouned())
