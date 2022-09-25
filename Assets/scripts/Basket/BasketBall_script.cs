@@ -9,16 +9,26 @@ public class BasketBall_script : MonoBehaviour
     //forward and upward forces
     public float forwardForce = 7.5f;
     public float upwardForce = 5f;
+    //the damage wen it colides with the boss
+    public int damage = 3;
 
     // Start is called before the first frame update
     void Start()
     {
         rb.AddForce(Time.deltaTime * new Vector3(forwardForce * 50, upwardForce * 50, 0));
+        Invoke("delete_bassketball", 1.5f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void delete_bassketball()
     {
-        
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.CompareTag("boss"))
+        {
+            other.collider.GetComponent<TakeDamage>().takeDamage(damage);
+        }
     }
 }

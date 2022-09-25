@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - NLdocent
   - basket
+  - boss
   layers:
   - Default
   - TransparentFX
