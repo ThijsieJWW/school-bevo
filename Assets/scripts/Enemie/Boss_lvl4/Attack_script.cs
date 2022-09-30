@@ -7,13 +7,14 @@ using UnityEngine.Animations;
 public class Attack_script : MonoBehaviour
 {
     public Transform GFX;
-    public Transform charge_pos;
-    public Transform normal_pos;
     public float charge_time;
 
     public Animator animator;
 
     bool isCharging = false;
+
+    public GameObject basketbal;
+    public Transform point_to_shoot;
 
     // Update is called once per frame
     void Start()
@@ -48,11 +49,24 @@ public class Attack_script : MonoBehaviour
     void back_charge_attack()
     {
         animator.Play("back_charge");
-        Invoke("idel", 4f);
+        Invoke("basketbal_attack_for", 4f);
+    }
+
+    void basketbal_attack_for()
+    {
+        animator.Play("idel");
+        for (int i = 0; i <= 10; i++)
+        {
+            Invoke("basketbal_attack", 1f);
+            if (i == 10)
+            {
+                Invoke("idel", 1f);
+            }
+        }
     }
 
     void basketbal_attack()
     {
-
+        Instantiate(basketbal, point_to_shoot.position, transform.rotation);
     }
 }

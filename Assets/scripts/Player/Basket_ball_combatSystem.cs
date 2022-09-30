@@ -21,7 +21,10 @@ public class Basket_ball_combatSystem : MonoBehaviour
     void Start()
     {
         current_basketBall = 0;
-        max_basketball_txt.text = max_basketBall.ToString();
+        if (max_basketball_txt != null)
+        {
+            max_basketball_txt.text = max_basketBall.ToString();
+        }
     }
 
     // Update is called once per frame
@@ -31,8 +34,10 @@ public class Basket_ball_combatSystem : MonoBehaviour
         {
             shootBall();        
         }
-
-        current_basketball_txt.text = current_basketBall.ToString();
+        if (current_basketball_txt != null)
+        {
+            current_basketball_txt.text = current_basketBall.ToString();
+        }
     }
 
     void shootBall()

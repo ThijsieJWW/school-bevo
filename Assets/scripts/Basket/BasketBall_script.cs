@@ -7,7 +7,7 @@ public class BasketBall_script : MonoBehaviour
     //refrence to the rigidbody 2D and calling it rb
     public Rigidbody2D rb;
     //forward and upward forces
-    public float forwardForce = 7.5f;
+    public float forwardForce = 5;
     public float upwardForce = 5f;
     //the damage wen it colides with the boss
     public int damage = 3;
