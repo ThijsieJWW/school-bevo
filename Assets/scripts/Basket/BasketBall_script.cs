@@ -16,7 +16,7 @@ public class BasketBall_script : MonoBehaviour
     void Start()
     {
         rb.AddForce(Time.deltaTime * new Vector3(forwardForce * 50, upwardForce * 50, 0));
-        Invoke("delete_bassketball", 1.5f);
+        Invoke("delete_bassketball", 2.5f);
     }
 
     void delete_bassketball()

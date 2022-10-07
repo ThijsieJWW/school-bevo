@@ -55,12 +55,12 @@ public class Attack_script : MonoBehaviour
     void basketbal_attack_for()
     {
         animator.Play("idel");
-        for (int i = 0; i <= 10; i++)
+        for (int i = 0; i <= 10;)
         {
-            Invoke("basketbal_attack", 1f);
-            if (i == 10)
+            if (i < 11)
             {
-                Invoke("idel", 1f);
+                Invoke("basketbal_attack", 2f);
+                i++;
             }
         }
     }
