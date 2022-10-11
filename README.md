@@ -1,2 +1,2 @@
 # school-bevo
-just a school project in unity
+a unity game for school
