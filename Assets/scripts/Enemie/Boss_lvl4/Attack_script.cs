@@ -49,24 +49,6 @@ public class Attack_script : MonoBehaviour
     void back_charge_attack()
     {
         animator.Play("back_charge");
-        Invoke("basketbal_attack_for", 4f);
-    }
-
-    void basketbal_attack_for()
-    {
-        animator.Play("idel");
-        for (int i = 0; i <= 10;)
-        {
-            if (i < 11)
-            {
-                Invoke("basketbal_attack", 2f);
-                i++;
-            }
-        }
-    }
-
-    void basketbal_attack()
-    {
-        Instantiate(basketbal, point_to_shoot.position, transform.rotation);
+        Invoke("idel", 4f);
     }
 }
