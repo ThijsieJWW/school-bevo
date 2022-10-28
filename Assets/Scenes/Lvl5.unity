@@ -262,7 +262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: LEVEL 5 IS COMMING
+  m_Text: Level 5 is nog niet klaar
 --- !u!222 &438876939
 CanvasRenderer:
   m_ObjectHideFlags: 0
