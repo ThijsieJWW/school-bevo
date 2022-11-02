@@ -2205,6 +2205,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7391811123990814932, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
   m_PrefabInstance: {fileID: 7391811123413230825}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1704150082 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7391811123990814930, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+  m_PrefabInstance: {fileID: 7391811123413230825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1704569985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3178,5 +3183,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7391811123990814934, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1704150082}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d25ac8bb6c56eb4e9a6deed012a4f64, type: 3}
