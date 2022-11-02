@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class GameManger : MonoBehaviour
 {
@@ -20,15 +21,25 @@ public class GameManger : MonoBehaviour
     {
         Won_table.SetActive(false);
         Time.timeScale = 1f;
-        communicator = new ServerCommunicator();
         updateScores();
+        communicator = new ServerCommunicator();
         txtlist = new GameObject[0];
+        viewtrans = view.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (communicator.getScores().Length <= 1)
+        {
+            try
+            {
+                StartCoroutine(communicator.updateScores());
+            } catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+        }
     }
 
     public void uploadScores(Score score)
@@ -69,30 +80,35 @@ public class GameManger : MonoBehaviour
     {
         Time.timeScale = 0f;
         Won_table.SetActive(true);
+        onFinish();
     }
 
     public void Lvl2_finish()
     {
         Time.timeScale = 0f;
         Won_table.SetActive(true);
+        onFinish();
     }
 
     public void Lvl3_finish()
     {
         Time.timeScale = 0f;
         Won_table.SetActive(true);
+        onFinish();
     }
 
     public void Lvl4_finish()
     {
         Time.timeScale = 0f;
         Won_table.SetActive(true);
+        onFinish();
     }
 
     public void Lvl5_finish()
     {
         Time.timeScale = 0f;
         Won_table.SetActive(true);
+        onFinish();
     }
 
     public void NextLVL_button(string level)
