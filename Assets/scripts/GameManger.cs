@@ -12,39 +12,26 @@ public class GameManger : MonoBehaviour
     public GameObject Won_table;
     public GameObject textprefab;
     public GameObject view;
+    public int level;
     private RectTransform viewtrans;
     private GameObject[] txtlist;
     private ServerCommunicator communicator;
+    private Time startTime;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Won_table.SetActive(false);
         Time.timeScale = 1f;
-        updateScores();
         communicator = new ServerCommunicator();
         txtlist = new GameObject[0];
         viewtrans = view.GetComponent<RectTransform>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (communicator.getScores().Length <= 1)
-        {
-            try
-            {
-                StartCoroutine(communicator.updateScores());
-            } catch (Exception e)
-            {
-                Debug.LogException(e);
-            }
-        }
+        updateScores();
     }
 
     public void uploadScores(Score score)
     {
-        communicator.sendPost(score);
+        StartCoroutine(communicator.sendPost(score));
     }
 
     public void updateScores()
@@ -61,19 +48,33 @@ public class GameManger : MonoBehaviour
     {
         // show list
         Score[] scores = getScores();
+        Debug.Log(scores);
+        Debug.Log("Reset scores.");
         for (int i = 0; i < txtlist.Length; i++)
         {
             Destroy(txtlist[i]);
         }
 
         txtlist = new GameObject[0];
+        Debug.Log("adding objects to list");
         for (int i =0; i < scores.Length; i++)
         {
             GameObject obj = GameObject.Instantiate(textprefab);
             obj.transform.SetParent(viewtrans);
+            obj.GetComponent<Text>().text = scores[i].name + ": " + scores[i].score;
+            obj.transform.position.Set(viewtrans.position.x, viewtrans.position.y+(i*20), 0);
             obj.SetActive(true);
             txtlist.Append(obj);
         }
+
+        // upload scores
+        float secs = Time.timeSinceLevelLoad;
+        Score s = new Score();
+        s.score = (int)secs;
+        s.name = "Naamloos";
+        s.level = level;
+        Debug.Log("uploading score");
+        uploadScores(s);
     }
 
     public void Lvl1_finish()
