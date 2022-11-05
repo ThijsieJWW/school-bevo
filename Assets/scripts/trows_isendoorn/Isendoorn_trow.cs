@@ -23,5 +23,11 @@ public class Isendoorn_trow : MonoBehaviour
         int randomNum = Random.Range(minint+1, maxint+1);
         rb.AddForce(Time.deltaTime * new Vector3(-randomNum * multiplir, randomNum * multiplir, 0));
         Debug.Log(randomNum);
+        Invoke("Delete", 3f);
+    }
+
+    private void Delete()
+    {
+        Destroy(gameObject);
     }
 }
