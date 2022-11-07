@@ -15,6 +15,10 @@ public class math_problem_code : MonoBehaviour
     //refrence to the UI
     public Text num_1;
     public Text num_2;
+    public Text input_text;
+    //variable to store the answer from the Player
+    public string player_answer;
+
 
     public void calculte_diff_num()
     {
@@ -26,5 +30,22 @@ public class math_problem_code : MonoBehaviour
         Debug.Log("Answer = " + answer);
         num_1.text = first_num.ToString();
         num_2.text = second_num.ToString();  
+    }
+
+    public void check_answer()
+    {
+        player_answer = input_text.GetComponent<Text>().text;
+        string answer_to_string = answer.ToString();
+        if (player_answer == answer_to_string)
+        {
+            Debug.Log("correct");
+            //TODO: damage the boss
+            //TODO: a correct sfx
+        }
+        else
+        {
+            Debug.Log("wrong answer, good answer was: " + answer);
+            //TODO: a incorrect sfx
+        }
     }
 }
