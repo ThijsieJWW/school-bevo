@@ -42,7 +42,7 @@ public class math_problem_code : MonoBehaviour
         {
             Debug.Log("correct");
             //damage the boss
-            isen_script.TakeDamage(10);
+            isen_script.TakeDamage(150);
             //TODO: a correct sfx
         }
         else

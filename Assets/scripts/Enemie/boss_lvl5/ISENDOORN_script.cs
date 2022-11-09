@@ -14,6 +14,7 @@ public class ISENDOORN_script : MonoBehaviour
     public GameObject math_problem_panel;
     //script refrence
     public math_problem_code math_code;
+    public GameManger gamemanger;
     // Start is called before the first frame update
     void Start()
     {
@@ -104,6 +105,7 @@ public class ISENDOORN_script : MonoBehaviour
         if (current_hp <= 0)
         {
             Die();
+            gamemanger.Lvl5_finish();
         }
     }
 

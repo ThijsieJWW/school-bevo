@@ -10,6 +10,7 @@ public class GameManger : MonoBehaviour
 {
     Score_Scripts score_script;
     public GameObject Won_table;
+    public GameObject math_problem;
     public GameObject textprefab;
     public GameObject view;
     public int level;
@@ -109,6 +110,7 @@ public class GameManger : MonoBehaviour
     {
         Time.timeScale = 0f;
         Won_table.SetActive(true);
+        math_problem.SetActive(false);
         onFinish();
     }
 
