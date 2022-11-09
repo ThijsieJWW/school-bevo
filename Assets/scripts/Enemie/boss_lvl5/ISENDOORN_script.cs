@@ -22,6 +22,8 @@ public class ISENDOORN_script : MonoBehaviour
         Invoke("Attack1", 2);
         //set the math problem panel to nonactive (pure to avoid bugs)
         math_problem_panel.SetActive(false);
+        //setting up health
+        current_hp = Max_hp;
     }
 
     void Attack1()
@@ -88,5 +90,25 @@ public class ISENDOORN_script : MonoBehaviour
     {
         math_problem_panel.SetActive(false);
         Start();
+    }
+
+    //take damage
+    //health stats
+    public int Max_hp = 150;
+    public int current_hp;
+
+    public void TakeDamage(int damage)
+    {
+        current_hp -= damage;
+
+        if (current_hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }

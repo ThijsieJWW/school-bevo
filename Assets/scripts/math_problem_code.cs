@@ -18,6 +18,8 @@ public class math_problem_code : MonoBehaviour
     public Text input_text;
     //variable to store the answer from the Player
     public string player_answer;
+    //refrences
+    public ISENDOORN_script isen_script;
 
 
     public void calculte_diff_num()
@@ -39,7 +41,8 @@ public class math_problem_code : MonoBehaviour
         if (player_answer == answer_to_string)
         {
             Debug.Log("correct");
-            //TODO: damage the boss
+            //damage the boss
+            isen_script.TakeDamage(10);
             //TODO: a correct sfx
         }
         else
