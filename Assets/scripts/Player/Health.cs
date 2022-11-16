@@ -18,7 +18,6 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        rb.AddForce(new Vector2(-25, 50));
 
         if (currentHealth <= 0)
         {

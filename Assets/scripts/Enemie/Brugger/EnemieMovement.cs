@@ -7,6 +7,12 @@ public class EnemieMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float Move_Speed = 100f;
+    public float despawn_time = 2f;
+
+    private void Start()
+    {
+        Invoke("despawn", despawn_time);
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -20,5 +26,10 @@ public class EnemieMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void despawn()
+    {
+        Destroy(gameObject);
     }
 }
