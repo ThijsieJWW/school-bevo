@@ -266,7 +266,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce90f7695a8db3848a9b8df2590f2cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Won_table: {fileID: 0}
+  Won_table: {fileID: 839412977}
+  math_problem: {fileID: 0}
+  textprefab: {fileID: 2083990880}
+  view: {fileID: 1327746413}
+  level: 3
 --- !u!4 &24819152
 Transform:
   m_ObjectHideFlags: 0
@@ -1325,6 +1329,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6974590831736347306, guid: 9424ad705e4ea9f4f8b4c8712343fbf9, type: 3}
   m_PrefabInstance: {fileID: 1850655454}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &839412977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7689410385604322722, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+  m_PrefabInstance: {fileID: 785029921}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &951549701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2090,6 +2099,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6974590831736347306, guid: 40a3a0f3770a68240b82bdc4aac5f04f, type: 3}
   m_PrefabInstance: {fileID: 268861736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1327746413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7163295774947206554, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+  m_PrefabInstance: {fileID: 785029921}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1349436663
 GameObject:
@@ -3215,6 +3229,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6974590831736347306, guid: 40a3a0f3770a68240b82bdc4aac5f04f, type: 3}
   m_PrefabInstance: {fileID: 1623836946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2083990880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4926353832049538503, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+  m_PrefabInstance: {fileID: 785029921}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4258874649391722548
 PrefabInstance:
