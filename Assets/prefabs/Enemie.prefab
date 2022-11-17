@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8655374132757380230}
   Move_Speed: 45
-  despawn_time: 2
+  despawn_time: 6
 --- !u!114 &877930693986600905
 MonoBehaviour:
   m_ObjectHideFlags: 0
