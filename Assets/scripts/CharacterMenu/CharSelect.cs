@@ -52,6 +52,6 @@ public class CharSelect : MonoBehaviour
     void Select()
     {
         CharacterSettings.SelectedCharacter = currChar;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }
