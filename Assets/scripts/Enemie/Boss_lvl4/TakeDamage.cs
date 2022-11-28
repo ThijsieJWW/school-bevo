@@ -44,6 +44,6 @@ public class TakeDamage : MonoBehaviour
 
     void Die()
     {
-        gamemanger.Lvl4_finish();
+        gamemanger.onFinish();
     }
 }
