@@ -2327,6 +2327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 435656976, guid: 807429b7d22962f44b2f6ac8e3bc989e, type: 3}
+      propertyPath: m_Name
+      value: Health-slider_canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 294231327138620728, guid: 807429b7d22962f44b2f6ac8e3bc989e, type: 3}
       propertyPath: max_basketball_txt
       value: 
