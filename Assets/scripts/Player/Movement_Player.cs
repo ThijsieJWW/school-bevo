@@ -27,43 +27,37 @@ public class Movement_Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)//check if nothing is pressed
         {
-            mx = 0f;//set the forces to nothing
-            if (animtor != null)
-            {
-                animtor.SetFloat("speed", 0);
-            }
+            mx = 0f; // set the forces to nothing
+            animtor.SetFloat("speed", 0);
         }
 
         if (Input.GetKey(KeyCode.D))//check for the D button
         {
             mx = 1f;//set the forces to right
-            if (animtor != null)
-            {
-                animtor.SetFloat("speed", 1);
-            }
+            animtor.SetFloat("speed", 1);
         }
 
         if (Input.GetKey(KeyCode.A))//check for the A button
         {
             mx = - 1f;//set the forces to left
-            if (animtor != null)
-            {
-                animtor.SetFloat("speed", 1);
-            }
+            animtor.SetFloat("speed", 1);
         }
 
         if (Input.GetKeyDown(KeyCode.W) && isGrouned())
         {
+            animtor.SetFloat("speed", 0);
             Jump();
             JumpSmoke.Play();
         }
 
         if (Input.GetKey(KeyCode.S))
         {
+            animtor.SetFloat("speed", 0);
             sliding = true;
         }
         else
         {
+            animtor.SetFloat("speed", 1);
             sliding = false;
         }
 
@@ -81,7 +75,6 @@ public class Movement_Player : MonoBehaviour
     void Jump()
     {
         Vector2 movement = new Vector2(rb.velocity.x, JumpForce);
-
         rb.velocity = movement;
     }
 
@@ -112,8 +105,6 @@ public class Movement_Player : MonoBehaviour
             {
                 health.die();
             }
-            Debug.Log("so far good");
-            Debug.Log("i hope this works");
         }
 
     }
