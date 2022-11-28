@@ -8,7 +8,7 @@ public class ChemiDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
             Health healt = other.GetComponent<Health>();
 
