@@ -28,36 +28,34 @@ public class Movement_Player : MonoBehaviour
         if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)//check if nothing is pressed
         {
             mx = 0f; // set the forces to nothing
-            animtor.SetFloat("speed", 0);
+            animtor.SetFloat("speed", 1);
         }
 
         if (Input.GetKey(KeyCode.D))//check for the D button
         {
             mx = 1f;//set the forces to right
-            animtor.SetFloat("speed", 1);
+            animtor.SetFloat("speed", 0);
         }
 
         if (Input.GetKey(KeyCode.A))//check for the A button
         {
             mx = - 1f;//set the forces to left
-            animtor.SetFloat("speed", 1);
+            animtor.SetFloat("speed", 0);
         }
 
         if (Input.GetKeyDown(KeyCode.W) && isGrouned())
         {
-            animtor.SetFloat("speed", 0);
+            animtor.SetFloat("speed", 1);
             Jump();
             JumpSmoke.Play();
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            animtor.SetFloat("speed", 0);
             sliding = true;
         }
         else
         {
-            animtor.SetFloat("speed", 1);
             sliding = false;
         }
 
