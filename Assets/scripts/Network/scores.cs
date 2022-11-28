@@ -38,13 +38,11 @@ public class ServerCommunicator
         form.AddField("name", score.name);
         form.AddField("level", score.level);
         UnityWebRequest req = UnityWebRequest.Post(Source+"/post", form);
-        Debug.Log("Sending request with form:"+form);
         yield return req.SendWebRequest();
     }
 
     public IEnumerator updateScores()
     {
-        Debug.Log("starting download");
         UnityWebRequest req = UnityWebRequest.Get(Source+"/get/"+Level.ToString());
         yield return req.SendWebRequest();
         if (req.result == UnityWebRequest.Result.ConnectionError)
@@ -52,15 +50,12 @@ public class ServerCommunicator
             Debug.Log("error while connecting with server.");
         } else
         {
-            Debug.Log("successfully downloaded scores.");
             ParseJsonScores(req.downloadHandler.text);
-            Debug.Log("successfully parsed scores.");
         }
     }
 
     private void ParseJsonScores(string jsonlist)
     {
-        Debug.Log(jsonlist);
         scores = JsonUtility.FromJson<ScoreTable>(jsonlist);
     }
 

@@ -13,7 +13,7 @@ public class GameManger : MonoBehaviour
     public GameObject math_problem;
     public GameObject textprefab;
     public GameObject view;
-    public int level;
+    private int level;
     private RectTransform viewtrans;
     private GameObject[] txtlist;
     private ServerCommunicator communicator;
@@ -22,6 +22,7 @@ public class GameManger : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        level = SceneManager.GetActiveScene().buildIndex - 1;
         Won_table.SetActive(false);
         Time.timeScale = 1f;
         communicator = new ServerCommunicator();
@@ -47,6 +48,9 @@ public class GameManger : MonoBehaviour
 
     public void onFinish()
     {
+        Time.timeScale = 0f;
+        Won_table.SetActive(true);
+
         // show list
         Score[] scores = getScores();
         Debug.Log(scores);
@@ -78,46 +82,9 @@ public class GameManger : MonoBehaviour
         uploadScores(s);
     }
 
-    public void Lvl1_finish()
+    public void NextLVL_button()
     {
-        Time.timeScale = 0f;
-        Won_table.SetActive(true);
-        onFinish();
-    }
-
-    public void Lvl2_finish()
-    {
-        Time.timeScale = 0f;
-        Won_table.SetActive(true);
-        onFinish();
-    }
-
-    public void Lvl3_finish()
-    {
-        Time.timeScale = 0f;
-        Won_table.SetActive(true);
-        onFinish();
-    }
-
-    public void Lvl4_finish()
-    {
-        Time.timeScale = 0f;
-        Won_table.SetActive(true);
-        onFinish();
-    }
-
-    public void Lvl5_finish()
-    {
-        Time.timeScale = 0f;
-        Won_table.SetActive(true);
-        math_problem.SetActive(false);
-        onFinish();
-    }
-
-    public void NextLVL_button(string level)
-    {
-        Debug.Log("Next level");
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void main_Menu()

@@ -105,7 +105,7 @@ public class ISENDOORN_script : MonoBehaviour
         if (current_hp <= 0)
         {
             Die();
-            gamemanger.Lvl5_finish();
+            gamemanger.onFinish();
         }
     }
 

@@ -11,8 +11,7 @@ public class PortalDetection_1 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("you won lvl 1");
-            gm.Lvl1_finish();
+            gm.onFinish();
         }
     }
 }
