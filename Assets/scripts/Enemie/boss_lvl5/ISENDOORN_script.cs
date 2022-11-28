@@ -15,7 +15,21 @@ public class ISENDOORN_script : MonoBehaviour
     //script refrence
     public math_problem_code math_code;
     public GameManger gamemanger;
+    //slider refrence
+    public Slider hpslider;
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        //setting up health
+        current_hp = Max_hp;
+        //setting up healt slider
+        hpslider.value = Max_hp;
+        hpslider.maxValue = Max_hp;
+        
+    }
+
     void Start()
     {
         //trow object rigidbody
@@ -23,8 +37,11 @@ public class ISENDOORN_script : MonoBehaviour
         Invoke("Attack1", 2);
         //set the math problem panel to nonactive (pure to avoid bugs)
         math_problem_panel.SetActive(false);
-        //setting up health
-        current_hp = Max_hp;
+    }
+
+    private void Update()
+    {
+        hpslider.value = current_hp;
     }
 
     void Attack1()
@@ -95,7 +112,7 @@ public class ISENDOORN_script : MonoBehaviour
 
     //take damage
     //health stats
-    public int Max_hp = 150;
+    public int Max_hp = 100;
     public int current_hp;
 
     public void TakeDamage(int damage)
@@ -105,6 +122,7 @@ public class ISENDOORN_script : MonoBehaviour
         if (current_hp <= 0)
         {
             Die();
+            math_problem_panel.SetActive(false);
             gamemanger.onFinish();
         }
     }
