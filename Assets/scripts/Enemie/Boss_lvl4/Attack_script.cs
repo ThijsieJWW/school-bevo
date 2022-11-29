@@ -41,14 +41,14 @@ public class Attack_script : MonoBehaviour
 
     void charge_attack()
     {
-        animator.Play("charge");
+        animator.Play("forward_charge");
         isCharging = true;
         Invoke("back_charge_attack", 2.5f);
     }
 
     void back_charge_attack()
     {
-        animator.Play("back_charge");
-        Invoke("idel", 4f);
+        animator.Play("backcharge");
+        Invoke("idel", 2f);
     }
 }
