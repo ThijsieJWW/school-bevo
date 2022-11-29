@@ -30,4 +30,13 @@ public class Isendoorn_trow : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<Health>().TakeDamage(1);
+            Destroy(gameObject);
+        }
+    }
 }
