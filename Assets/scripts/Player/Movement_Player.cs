@@ -21,6 +21,9 @@ public class Movement_Player : MonoBehaviour
     //varibles for animation
     public Animator animtor;
 
+    //variable for lvl 5
+    public bool can_move_right = true;
+
     float mx;
 
     private void Start()
@@ -30,7 +33,7 @@ public class Movement_Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)//check if nothing is pressed
+        if (can_move_right = true &&Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)//check if nothing is pressed
         {
             mx = 0f; // set the forces to nothing
             animtor.SetFloat("speed", 0);
