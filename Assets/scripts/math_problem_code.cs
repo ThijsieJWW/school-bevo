@@ -27,9 +27,7 @@ public class math_problem_code : MonoBehaviour
         first_num = Random.Range(max_num + 1, min_num + 1);
         second_num = Random.Range(max_num + 1, min_num + 1);
         answer = first_num + second_num;
-        Debug.Log("first num = " + first_num);
-        Debug.Log("second num = " + second_num);
-        Debug.Log("Answer = " + answer);
+        Debug.Log("Answer: " + answer);
         num_1.text = first_num.ToString();
         num_2.text = second_num.ToString();  
     }
@@ -40,14 +38,11 @@ public class math_problem_code : MonoBehaviour
         string answer_to_string = answer.ToString();
         if (player_answer == answer_to_string)
         {
-            Debug.Log("correct");
-            //damage the boss
             isen_script.TakeDamage(10);
             //TODO: a correct sfx
         }
         else
         {
-            Debug.Log("wrong answer, good answer was: " + answer);
             //TODO: a incorrect sfx
         }
     }
