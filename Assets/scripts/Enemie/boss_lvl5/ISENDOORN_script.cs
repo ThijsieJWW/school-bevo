@@ -116,6 +116,7 @@ public class ISENDOORN_script : MonoBehaviour
     {
         Instantiate(trow_object, attack_point.position, attack_point.rotation);
         Invoke("start_math_problem", 3);
+        isen_animator.Play("idel");
         //plays animation
         isen_animator.Play("trow_attack");
     }
