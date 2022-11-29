@@ -57,11 +57,11 @@ public class math_problem_code : MonoBehaviour
         if (player_answer == answer_to_string)
         {
             isen_script.TakeDamage(10);
-            //TODO: a correct sfx
+            FindObjectOfType<audiomanger>().Play("correct");
         }
         else
         {
-            //TODO: a incorrect sfx
+            FindObjectOfType<audiomanger>().Play("incorrect");
         }
     }
 }
