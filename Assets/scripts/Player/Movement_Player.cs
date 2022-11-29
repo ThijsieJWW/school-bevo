@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.scripts.CharacterMenu;
 
 public class Movement_Player : MonoBehaviour
 {
@@ -23,29 +24,34 @@ public class Movement_Player : MonoBehaviour
 
     float mx;
 
+    private void Start()
+    {
+        animtor.SetInteger("player", CharacterSettings.SelectedCharacter);
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false)//check if nothing is pressed
         {
             mx = 0f; // set the forces to nothing
-            animtor.SetFloat("speed", 1);
+            animtor.SetFloat("speed", 0);
         }
 
         if (Input.GetKey(KeyCode.D))//check for the D button
         {
             mx = 1f;//set the forces to right
-            animtor.SetFloat("speed", 0);
+            animtor.SetFloat("speed", 1);
         }
 
         if (Input.GetKey(KeyCode.A))//check for the A button
         {
             mx = - 1f;//set the forces to left
-            animtor.SetFloat("speed", 0);
+            animtor.SetFloat("speed", 1);
         }
 
         if (Input.GetKeyDown(KeyCode.W) && isGrouned())
         {
-            animtor.SetFloat("speed", 1);
+            animtor.SetFloat("speed", 0);
             Jump();
             JumpSmoke.Play();
         }
