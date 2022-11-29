@@ -82,9 +82,9 @@ public class GameManger : MonoBehaviour
         uploadScores(s);
     }
 
-    public void NextLVL_button()
+    public void NextLVL_button(string level)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(level);
     }
 
     public void main_Menu()
