@@ -52,7 +52,6 @@ public class Movement_Player : MonoBehaviour
         {
             animtor.SetFloat("speed", 0);
             Jump();
-            JumpSmoke.Play();
         }
 
         if (Input.GetKey(KeyCode.S))
