@@ -10,6 +10,8 @@ public class Attack_script : MonoBehaviour
     public float charge_time;
 
     public Animator animator;
+    public Animator walk_animator;
+    public SpriteRenderer body_render;
 
     bool isCharging = false;
 
@@ -34,21 +36,26 @@ public class Attack_script : MonoBehaviour
     //states
     void idel()
     {
+        body_render.flipX = true;
         animator.Play("idel");
+        walk_animator.Play("idel");
         isCharging = false;
         Invoke("charge_attack", 5);
     }
 
     void charge_attack()
     {
-        animator.Play("forward_charge");
+        animator.Play("charge");
+        walk_animator.Play("running");
         isCharging = true;
         Invoke("back_charge_attack", 2.5f);
     }
 
     void back_charge_attack()
     {
-        animator.Play("backcharge");
+        body_render.flipX = false;
+        animator.Play("back_charge");
+        walk_animator.Play("running");
         Invoke("idel", 2f);
     }
 }
