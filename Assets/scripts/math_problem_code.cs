@@ -20,6 +20,8 @@ public class math_problem_code : MonoBehaviour
     public string player_answer;
     //refrences
     public ISENDOORN_script isen_script;
+    //setting bool of you can press enter to treu or false
+    private bool Can_press_enter = false;
 
 
     public void calculte_diff_num()
@@ -29,7 +31,23 @@ public class math_problem_code : MonoBehaviour
         answer = first_num + second_num;
         Debug.Log("Answer: " + answer);
         num_1.text = first_num.ToString();
-        num_2.text = second_num.ToString();  
+        num_2.text = second_num.ToString();
+        Can_press_enter = true;
+        Invoke("reset_enter_press", 5f);
+    }
+
+    void reset_enter_press()
+    {
+        Can_press_enter = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Return) && Can_press_enter == true)
+        {
+            check_answer();
+            Can_press_enter = false;
+        }
     }
 
     public void check_answer()
