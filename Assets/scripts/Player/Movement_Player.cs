@@ -7,7 +7,6 @@ public class Movement_Player : MonoBehaviour
 {
     public float Move_Speed;
     public Rigidbody2D rb;
-    public ParticleSystem JumpSmoke;
 
     public float JumpForce = 20f;
     public Transform GroundCheck;

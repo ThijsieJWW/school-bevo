@@ -3038,6 +3038,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 106672833}
     m_Modifications:
     - target: {fileID: 6462159502171536395, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462159502171536395, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Lvl3
       objectReference: {fileID: 0}
