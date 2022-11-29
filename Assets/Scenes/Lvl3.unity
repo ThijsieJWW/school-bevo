@@ -2659,6 +2659,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Level 3 gehaald!
       objectReference: {fileID: 0}
+    - target: {fileID: 7689410385604322722, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
 --- !u!224 &785029922 stripped
@@ -3582,7 +3586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6974590831736347306, guid: 9424ad705e4ea9f4f8b4c8712343fbf9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.34
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 6974590831736347306, guid: 9424ad705e4ea9f4f8b4c8712343fbf9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7633,7 +7637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6974590831736347306, guid: 9424ad705e4ea9f4f8b4c8712343fbf9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.46
+      value: -2.94
       objectReference: {fileID: 0}
     - target: {fileID: 6974590831736347306, guid: 9424ad705e4ea9f4f8b4c8712343fbf9, type: 3}
       propertyPath: m_LocalPosition.z
