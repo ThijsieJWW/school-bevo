@@ -42,7 +42,6 @@ public class Basket_ball_combatSystem : MonoBehaviour
 
     void shootBall()
     {
-        Debug.Log("Basket ball shooted");
         Instantiate(Basketball, pointToShoot.position, transform.rotation);
         current_basketBall--;
     }
