@@ -137,6 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8042373217974638922}
-  forwardForce: 200
-  upwardForce: 175
+  forwardForce: 100
+  upwardForce: 75
   damage: 3

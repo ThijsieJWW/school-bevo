@@ -120,10 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db59bf7fca4c1824d821e0b48dac5035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minForce: 50
-  maxForce: 100
+  minForce: 25
+  maxForce: 75
   rb: {fileID: 6243110350437546959}
-  multiplir: 750
+  multiplir: 700
 --- !u!61 &587375853988945801
 BoxCollider2D:
   m_ObjectHideFlags: 0
