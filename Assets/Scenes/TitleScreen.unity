@@ -237,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitButton: {fileID: 1299031432}
   PlayButton: {fileID: 1143361231}
+  TutoButton: {fileID: 1134505708}
 --- !u!114 &949302620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +419,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Tutorial
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1134505709
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,11 +7,13 @@ public class titlescreen : MonoBehaviour
 {
     public Button ExitButton;
     public Button PlayButton;
+    public Button TutoButton;
 
     void Start()
     {
         ExitButton.onClick.AddListener(Exit);
         PlayButton.onClick.AddListener(Play);
+        TutoButton.onClick.AddListener(Tutorial);
     }
 
 
@@ -23,5 +25,10 @@ public class titlescreen : MonoBehaviour
     void Exit()
     {
         Application.Quit();
+    }
+
+    void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 }
