@@ -1281,11 +1281,19 @@ PrefabInstance:
       objectReference: {fileID: 1177328359}
     - target: {fileID: 6462159501440710204, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 740.1701
+      value: 708.3355
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462159501440710204, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 245.0152
       objectReference: {fileID: 0}
     - target: {fileID: 6462159501440710204, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.2081
+      value: 0.975399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462159501440710204, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.1634
       objectReference: {fileID: 0}
     - target: {fileID: 6462159502171536395, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
