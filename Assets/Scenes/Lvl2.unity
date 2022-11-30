@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -3025,6 +3025,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 106672833}
     m_Modifications:
+    - target: {fileID: 6462159501440710204, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 793.7515
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462159501440710204, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.044
+      objectReference: {fileID: 0}
     - target: {fileID: 6462159502171536395, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
@@ -3124,6 +3132,10 @@ PrefabInstance:
     - target: {fileID: 6462159502727786830, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
       propertyPath: m_Text
       value: Level 2 gehaald!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689410385604322722, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 262b47542e1b22241a6ae0d4dfd520a8, type: 3}
