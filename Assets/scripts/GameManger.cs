@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System;
 
 public class GameManger : MonoBehaviour
 {
     Score_Scripts score_script;
     public GameObject Won_table;
-    public GameObject math_problem;
     public GameObject textprefab;
     public GameObject view;
     private int level;

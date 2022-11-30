@@ -9,7 +9,7 @@ public class einde_tutorial : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("TitleScreen");
+            SceneManager.LoadScene(0);
         }
     }
 }
